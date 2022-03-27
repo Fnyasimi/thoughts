@@ -1,0 +1,13 @@
+---
+title: "How did I get here?"
+preview: images/social-preview.jpg  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+This is a place where I put my thoughts into action. When my mind wonders and I get curious, I come here to explore the vast knowledge and put it down in down in words and sometimes figures. 
+
+<br>
+

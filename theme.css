@@ -1,0 +1,158 @@
+
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default,
+   you may set its value to: unset
+   All rows must end with a semi-colon.                      */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      40px;
+  --body-size:       16px;
+  --code-size:       16px;
+  --aside-size:      14px;
+  --fig-cap-size:    14px;
+
+  /*-- Main font colors --*/
+  --title-color:     #000000;
+  --header-color:    rgba(0, 0, 0, 0.8);
+  --body-color:      rgba(0, 0, 0, 0.8);
+  --aside-color:     rgba(0, 0, 0, 0.6);
+  --fig-cap-color:   rgba(0, 0, 0, 0.6);
+
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    'Fira Mono', monospace;
+  --mono-font:       'Fira Code', monospace;
+  --body-font:       'Atkinson Hyperlegible', sans-serif;
+  --navbar-font:     'Fira Mono', monospace;  /* websites + blogs only */
+}
+
+/*-- ARTICLE METADATA --*/
+d-byline {
+  --heading-size:    0.6rem;
+  --heading-color:   rgba(0, 0, 0, 0.5);
+  --body-size:       0.8rem;
+  --body-color:      rgba(0, 0, 0, 0.8);
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    18px;
+  --contents-size:   16px;
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    15px;
+  --heading-color:   rgba(0, 0, 0, 0.65);
+  --text-size:       0.8em;
+  --text-color:      rgba(0, 0, 0, 0.5);
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  font-weight:        500;
+  --title-size:       35px;
+  --text-color:       black; /* rgba(255, 255, 255, 0.8); */
+  --text-size:        20px;
+  --hover-color:      black;
+  --bkgd-color:       white; /* #0F2E3D; */
+}
+
+.distill-site-footer {
+  --text-color:       black; /* rgba(255, 255, 255, 0.8); */
+  --text-size:        15px;
+  --hover-color:      black;
+  --bkgd-color:       white; /* #0F2E3D; */
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+
+
+/*-- ARTICLE CODE BLOCK --*/
+d-article pre {
+  background-color: #eeeeee;
+  padding: 10px;
+  overflow-x: auto !important;
+}
+
+d-article div.sourceCode pre{
+  overflow-x: auto !important;
+}
+
+
+/*-- INLINE CODE -- */
+d-article p code {
+  font-size: 14px;
+  color: #000000;
+  background-color: #eeeeee;
+  padding: 3px;
+}
+
+/* -- REMOVE THUMBNAIL IMAGES -- */
+/*
+.posts-list .post-preview .description{
+  width: 75%;
+}
+.posts-list .post-preview .thumbnail {
+  width: 0;
+  display: none;
+}
+.posts-list .post-preview img {
+  display: none;
+}
+*/
+
+
+/* -- ASIDE TAGS -- */
+aside {
+  padding-block-end: 1rem;
+}
+
+
+/*-- Additional custom styles --*/
+
+.categories li > a:hover {
+    color: #fbb940;
+    border-bottom: 1px #fbb940;
+}
+
+p a:hover  {
+    color:  #fbb940;
+}
+
+ul > li::marker {
+    font-weight: 700;
+    font-size: 1.125em;
+}
+
+/* Change appearance of headers */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+d-article h2, d-article h3 {
+    font-weight: 500;
+}
+
+
+.distill-site-header .logo img{
+  max-height: 35px; /* Makes logo bigger, default was 20px */
+}
+
+.distill-site-header {
+  padding-top: 0.5rem;
+}

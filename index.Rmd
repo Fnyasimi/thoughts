@@ -1,0 +1,6 @@
+---
+title: "Things that distract me from my normal day"
+site: distill::distill_website
+preview: image/social-preview.jpg
+listing: posts
+---
