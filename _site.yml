@@ -3,7 +3,7 @@ title: Thoughts...
 favicon: images/favicon.ico
 description: |
   Its a long day
-output_dir: "_site"
+output_dir: "docs"
 theme: theme.css
 base_url: https://fnyasimi.github.io/thoughts
 #repository_url: https://github.com/Fnyasimi/thoughts
@@ -29,3 +29,5 @@ output:
   distill::distill_article:
     includes:
       in_header: header.html
+      
+exclude: ['README.md', 'LICENCE']
