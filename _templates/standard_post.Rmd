@@ -1,0 +1,60 @@
+---
+title: "Title in sentence case" # <---- UPDATE ME
+description: |
+  Short quick description # <---- UPDATE ME
+author:
+  - first_name: "Festus"
+    last_name: "Nyasimi"
+    url: https://fnyasimi.gihub.io
+    affiliation: Nomad Scientist
+    affiliation_url: https://fnyasimi.github.io
+    #orcid_id: 000
+date: INSERT-DATE-HERE
+citation_url: https://fnyasimi.github.io/thoughts/INSERT-SLUG-HERE 
+repository_url: https://github.com/Fnyasimi/thoughts
+preview: preview-image.jpg  # <---- UPDATE ME 
+creative_commons: CC BY 
+output:
+  distill::distill_article:
+    self_contained: false
+params:
+  slug: INSERT-SLUG-HERE
+  date: INSERT-DATE-HERE
+  repo: Fnyasimi/thoughts
+---
+
+<!----
+
+checklist:
+  - check the "update me" messages in YAML above
+  - initialise the _renv folder with refinery::renv_new("name of post folder")
+  - populate the lockfile with refinery::renv_snapshot("name of post folder")
+  - update the _renv folder from snapshot with refinery::restore("name of post folder")
+
+---->
+
+
+<!--------------- setup post ----------------->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+refinery::renv_load(paste(params$date, params$slug, sep = "_"))
+```
+
+
+<!--------------- post ----------------->
+
+Rant over here as long as I want.
+
+<!--------------- appendices ----------------->
+
+```{r, echo=FALSE}
+refinery::insert_appendix(
+  repo_spec = params$repo, 
+  name = paste(params$date, params$slug, sep = "_")
+)
+```
+
+
+
+

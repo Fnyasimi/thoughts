@@ -1,0 +1,46 @@
+---
+title: "workflow"
+author: "Festus Nyasimi"
+date: "3/26/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(refinery)
+```
+
+
+## Start a new blog post
+```{r}
+refinery::use_article_template(
+  template = "_templates/standard_post.Rmd",
+  slug = "creating-a-network",
+  renv_new = FALSE)
+```
+
+
+## Initialise the _renv folder
+```{r}
+refinery::renv_new("2022-03-26_creating-a-network")
+```
+
+Write the blog
+
+## Snapshot your env
+```{r}
+refinery::renv_snapshot("2022-03-26_creating-a-network")
+```
+
+## Restore
+This is to get the same env for analysis
+```{r}
+refinery::renv_restore("2022-03-26_creating-a-network")
+```
+
+## Others
+The `refinery::renv_restore()` function is a wrapper around renv::restore(). It updates the state of the local package library so that it mirrors the state of the lockfile
+
+The `refinery::renv_delete()` function deletes all the renv infrastructure associated with a particular post. It exists so that you can wipe the local library, lockfile, etc, and start over.
+
+Courtesy of [Navarro](https://blog.djnavarro.net/posts/2021-09-30_on-blogging-reproducibly/)
